@@ -1,6 +1,6 @@
 # PWA-Budget-Tracker
 
-<a href='https://pacific-inlet-98148.herokuapp.com/'>Veiw deployed app here.</a>
+<a href='https://pacific-inlet-98148.herokuapp.com/' target='__blank'>Veiw deployed app here.</a>
 
 
 
