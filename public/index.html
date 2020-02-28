@@ -53,8 +53,8 @@
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./service-worker.js", { scope: "/" })
-        .then(() => console.log("We found your service worker file!"))
-        .catch(error => console.log("Service worker registration failed", error));
+        .then(() => console.log("Service worker working"))
+        .catch(error => console.log("Service worker failed", error));
     };       
   </script>
 </body>
