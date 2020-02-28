@@ -9,8 +9,8 @@ const FILES_TO_CACHE = [
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
-self.addEventListener('install', function (evt) {
-  evt.waitUntil(
+self.addEventListener('install', function (event) {
+  event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       console.log("Your files were pre-cached successfully!");
       return cache.addAll(FILES_TO_CACHE);
@@ -20,8 +20,8 @@ self.addEventListener('install', function (evt) {
   self.skipWaiting();
 });
 
-self.addEventListener("activate", function (evt) {
-  evt.waitUntil(
+self.addEventListener("activate", function (event) {
+  event.waitUntil(
     caches.keys().then(keyList => {
       return Promise.all(
         keyList.map(key => {
@@ -38,32 +38,32 @@ self.addEventListener("activate", function (evt) {
 });
 
 // fetch
-self.addEventListener("fetch", function (evt) {
-  if (evt.request.url.includes("/api/")) {
-    evt.respondWith(
+self.addEventListener("fetch", function (event) {
+  if (event.request.url.includes("/api/")) {
+    event.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache => {
-        return fetch(evt.request)
-          .then(response => {
-            // If the response was good, clone it and store it in the cache.
-            if (response.status === 200) {
-              cache.put(evt.request.url, response.clone());
+        return fetch(event.request)
+          .then(res => {
+            // If the res was good, clone it and store it in the cache.
+            if (res.status === 200) {
+              cache.put(event.request.url, res.clone());
             }
 
-            return response;
+            return res;
           })
           .catch(err => {
             // Network request failed, try to get it from the cache.
-            return cache.match(evt.request);
+            return cache.match(event.request);
           });
       }).catch(err => console.log(err))
     );
 
     return;
   }
-  evt.respondWith(
+  event.respondWith(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.match(evt.request).then(response => {
-        return response || fetch(evt.request);
+      return cache.match(event.request).then(res => {
+        return res || fetch(event.request);
       });
     })
   );
