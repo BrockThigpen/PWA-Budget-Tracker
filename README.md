@@ -14,15 +14,15 @@ AS AN avid traveller
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
 SO THAT my account balance is accurate when I am traveling
 
-### <a name="Overview"></a>Overview
-The Budget Tracker is progessive web application that allows you to add and subtract expenses. Because this application is a PWA the user will able to make changes offline and the application will update once it is brought back online.
+### <a name="Use"></a>Overview
+The Budget Tracker is progessive web application that allows you to add and subtract expenses. Through the use of service-worker the user will able to make changes offline and the application will update once it is brought back online.
 ![budgetDemo](https://user-images.githubusercontent.com/47798977/75585060-3e20d500-5a3f-11ea-8423-a1dd57d22e7f.png)
 
 ### <a name="Tech-Used"></a>Technologies Used
-This project utilizes HTML, CSS, Javascript, Node.js, Express.js, Mongoose, and is deployed through Heroku.
+This project utilizes HTML, CSS, Javascript, Node.js, Express.js, Mongoose, indexedDB, and is deployed through Heroku.
 
 ### <a name="Installation"></a>Installation
-Begin by cloning this repository, run <pre><code>NPM INSTALL</code></pre> in the root of the directory.
+Begin by cloning this repository, run <code>NPM INSTALL</code> in the root of the directory. You can then run <code>NPM START</code> and navigate to <code>localhost:3000</code>
 
 ### <a name="license"></a>MIT License
 
