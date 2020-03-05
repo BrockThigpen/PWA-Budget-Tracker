@@ -2,10 +2,29 @@
 
 <a href='https://pacific-inlet-98148.herokuapp.com/' target="_blank">Veiw deployed app here.</a>
 
+# Table Of Contents
+- [User Story](#User-Story)
+- [Overview](#Use)
+- [Technologies Used](#Tech-Used)
+- [Installation](#Installation)
+- [License](#license)
+
+### <a name="User-Story"></a>User Story
+AS AN avid traveller
+I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
+SO THAT my account balance is accurate when I am traveling
+
+### <a name="Overview"></a>Overview
+The Budget Tracker is progessive web application that allows you to add and subtract expenses. Because this application is a PWA the user will able to make changes offline and the application will update once it is brought back online.
 ![budgetDemo](https://user-images.githubusercontent.com/47798977/75585060-3e20d500-5a3f-11ea-8423-a1dd57d22e7f.png)
 
+### <a name="Tech-Used"></a>Technologies Used
+This project utilizes HTML, CSS, Javascript, Node.js, Express.js, Mongoose, and is deployed through Heroku.
 
-MIT License
+### <a name="Installation"></a>Installation
+Begin by cloning this repository, run <pre><code>NPM INSTALL</code></pre> in the root of the directory.
+
+### <a name="license"></a>MIT License
 
 Copyright (c) 2020 Brock Thigpen
 
