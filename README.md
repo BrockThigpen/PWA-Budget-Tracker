@@ -10,9 +10,9 @@
 - [License](#license)
 
 ### <a name="User-Story"></a>User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
+As an avid traveller<br/>
+I want to be able to track my withdrawals and deposits with or without a data/internet connection<br/>
+So that my account balance is accurate when I am traveling
 
 ### <a name="Use"></a>Overview
 The Budget Tracker is progessive web application that allows you to add and subtract expenses. Through the use of service-worker the user will able to make changes offline and the application will update once it is brought back online.
